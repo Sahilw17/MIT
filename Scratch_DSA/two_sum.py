@@ -11,5 +11,5 @@ hash_map={}
 for i in range(0,n):
     remaining=target-nums[i]
     if remaining in hash_map:
-        print(f"{hash_map[remaining],i}")
+        print(f"       {hash_map[remaining],i}")
     hash_map[nums[i]]=i
