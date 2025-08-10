@@ -14,3 +14,7 @@ def binary(nums,target):
             high=mid-1
     return -1
 print(binary(nums,target))
+
+
+
+print("binary Search")
