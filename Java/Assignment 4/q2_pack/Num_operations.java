@@ -7,4 +7,3 @@ public class Num_operations
 	n.accept_number();
 	n.operations();
 	}
-}
