@@ -29,7 +29,16 @@ class mat
 			}
 			System.out.println();
 		}
-	}	
+	}
+	
+	void add(mat m1,mat m2){
+		for(int i=0;i<r;i++){
+			for (int j=0;j<c ;j++ )
+			{
+				arr[i][j]=m1.arr[i][j]+m2.arr[i][j];
+			}
+		}
+	}
 }
 
 
@@ -43,8 +52,12 @@ class Q1_Addition
 		System.out.println("Enter the size of row and colunm");
 		r=sc.nextInt();
 		c=sc.nextInt();
-		mat m=new mat(r,c);
-		m.create();
-		m.print();
+		mat m1=new mat(r,c);
+		m1.create();
+		mat m2=new mat(r,c);
+		m2.create();
+		mat m3=new mat(r,c);
+		m3.add(m1,m2);
+		m3.print();
 	}
 }
