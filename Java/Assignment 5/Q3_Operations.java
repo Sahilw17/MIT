@@ -1,0 +1,86 @@
+import java.util.Scanner;
+class mat
+{
+	
+	int r;
+	int c;
+	int [][] arr;
+	Scanner sc=new Scanner(System.in);
+	mat(int r,int c){
+	this.r= r;
+	this.c= c;
+	arr = new int[r][c];
+	}
+	
+	void create(){
+		System.out.println("Enter the data in the matrix");
+		for (int i=0;i<r ;i++ )
+		{
+			for(int j=0;j<c;j++){
+				arr[i][j]=sc.nextInt();
+			}
+		}
+	}
+	
+	void print(){
+		for (int i=0;i<r ;i++ )
+		{
+			for(int j=0;j<c;j++){
+				System.out.print(arr[i][j]+" ");
+			}
+			System.out.println();
+		}
+	}
+	
+	void row_addition(mat m1) {
+		for (int i=0;i<r ;i++ ){
+			int add=0;
+			for (int j=0;j<c ;j++ )
+			{
+				add=add+m1.arr[i][j];
+			}
+				System.out.println("ADDition of rows: "+add) ;
+
+		}
+	}
+	
+	void col_addition(mat m1){
+		for (int i=0;i<r ;i++ )
+		{
+			int col_add=0;
+			for (int j=0;j<c ;j++ )
+			{
+				col_add=col_add +m1.arr[j][i];
+			}
+			System.out.println("Addition of column: "+col_add);		
+		}
+	}
+	
+	void row_min_max(mat m1) {
+		int min=-100000000000;
+		int max=0;
+		for (int i=0;i<r-1 ;i++ )
+		{
+			for (int j=0;j<c-1 ;j++ )
+			{
+				
+			}
+		}
+	}
+}
+
+class  Q3_Operations
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the the row and column");
+		int r=sc.nextInt();
+		int c=sc.nextInt();
+		mat m1=new mat(r,c);
+		m1.create();
+		m1.print();
+		m1.row_addition(m1);
+		m1.col_addition(m1);
+	}
+}
