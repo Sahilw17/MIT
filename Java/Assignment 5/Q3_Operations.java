@@ -57,14 +57,35 @@ class mat
 	}
 	
 	void row_min_max(mat m1) {
-		int min=-100000000000;
-		int max=0;
-		for (int i=0;i<r-1 ;i++ )
+
+		for (int i=0;i<r ;i++ )
 		{
-			for (int j=0;j<c-1 ;j++ )
+			int min=Integer.MAX_VALUE;
+			int max=Integer.MIN_VALUE;
+			for (int j=0;j<c ;j++ )		
 			{
-				
+				if(min>m1.arr[i][j])
+					min=m1.arr[i][j];
+				if(max<m1.arr[i][j])
+					max=m1.arr[i][j];	
 			}
+			System.out.println(i+1+"th row minimum :"+min+"  maximum: "+max);
+		}
+	}
+	
+	void col_min_max(mat m1){
+		for (int i =0;i<c ;i++ )
+		{
+			int min=Integer.MAX_VALUE;
+			int max=Integer.MIN_VALUE;
+			for (int j=0;j<r ;j++ )
+			{
+				if(min>m1.arr[j][i])
+					min=m1.arr[j][i];
+				if(max<m1.arr[j][i])
+					max=m1.arr[j][i];
+			}
+			System.out.println(i+1+"th Col minimum :"+min+"  maximum: "+max);
 		}
 	}
 }
@@ -80,7 +101,10 @@ class  Q3_Operations
 		mat m1=new mat(r,c);
 		m1.create();
 		m1.print();
-		m1.row_addition(m1);
+	/*	m1.row_addition(m1);
 		m1.col_addition(m1);
-	}
+	*/
+		m1.row_min_max(m1);
+		m1.col_min_max(m1);
+		}
 }
