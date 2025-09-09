@@ -36,7 +36,10 @@ class mat
 			for (int j=0;j<c ;j++ )
 			{
 				if(num==m1.arr[i][j])
+				{
 					System.out.println(i+" , "+j);
+					return;
+				}	
 			}
 		}
 	}

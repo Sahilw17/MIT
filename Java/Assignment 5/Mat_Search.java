@@ -38,9 +38,12 @@ class mat
 				if(num==m1.arr[i][j])
 				{
 					System.out.println(i+" , "+j);
+					return;
 				}	
 			}
 		}
+		System.out.println("The data is not found! ");
+		return;
 	}
 	
 }
